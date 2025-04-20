@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Sistem Persamaan Linear &#8212; My sample book</title>
+    <title>Solusi Persamaan Linear &#8212; My sample book</title>
   
   
   
@@ -57,12 +57,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Definisi Persamaan Linear" href="markdown.html" />
+    <link rel="next" title="Eliminasi Persamaan Linear" href="markdown-notebooks.html" />
+    <link rel="prev" title="Definisi Persamaan Linear" href="markdown.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,8 +124,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -145,7 +142,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -176,17 +173,17 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Sistem Persamaan Linear
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Definisi Persamaan Linear</a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="notebook.html">Solusi Persamaan Linear</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Solusi Persamaan Linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Eliminasi Persamaan Linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Penyelesaian%20SP.html">Penyelesaian Sistem Persamaan Linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrix.html">Matrix</a></li>
@@ -261,7 +258,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebook.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +288,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/notebook.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -301,7 +298,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -375,7 +372,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Sistem Persamaan Linear</h1>
+    <h1>Solusi Persamaan Linear</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -385,9 +382,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-sistem-persamaan-linear">1. Apa itu Sistem Persamaan Linear?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-sistem-persamaan-linear">2. Jenis-jenis Sistem Persamaan Linear</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-penyelesaian">3. Metode Penyelesaian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#satu-solusi">Satu Solusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#banyak-solusi">Banyak Solusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tidak-ada-solusi">Tidak Ada Solusi</a></li>
 </ul>
             </nav>
         </div>
@@ -399,42 +396,42 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="sistem-persamaan-linear">
-<h1>Sistem Persamaan Linear<a class="headerlink" href="#sistem-persamaan-linear" title="Link to this heading">#</a></h1>
-<section id="apa-itu-sistem-persamaan-linear">
-<h2>1. Apa itu Sistem Persamaan Linear?<a class="headerlink" href="#apa-itu-sistem-persamaan-linear" title="Link to this heading">#</a></h2>
-<p>Sistem persamaan linear adalah kumpulan persamaan yang memiliki variabel yang sama.
-Contohnya, jika kita punya dua persamaan:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2x+3y=6
-4x−y=7
-</pre></div>
-</div>
-<p>Ini adalah sistem persamaan linear karena ada dua persamaan yang mengandung variabel x dan y.</p>
-</section>
-<section id="jenis-jenis-sistem-persamaan-linear">
-<h2>2. Jenis-jenis Sistem Persamaan Linear<a class="headerlink" href="#jenis-jenis-sistem-persamaan-linear" title="Link to this heading">#</a></h2>
-<p>Dua variabel: Misalnya x dan y. Contoh:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x+y=10
-2x−y=5
-</pre></div>
-</div>
-<p>Tiga variabel: Misalnya x,y,z. Contoh:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x+y+z=6
-2x−y+3z=14
-x−4y−z=2
-</pre></div>
-</div>
-</section>
-<section id="metode-penyelesaian">
-<h2>3. Metode Penyelesaian<a class="headerlink" href="#metode-penyelesaian" title="Link to this heading">#</a></h2>
-<p>Ada beberapa cara untuk menyelesaikan sistem persamaan linear:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Metode Substitusi: Menyelesaikan salah satu persamaan untuk satu variabel, lalu mengganti variabel tersebut ke persamaan lainnya.
-Metode Eliminasi: Menambah atau mengurangi persamaan untuk menghilangkan satu variabel.
-</pre></div>
-</div>
-</section>
-<div class="toctree-wrapper compound">
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="solusi-persamaan-linear">
+<h1>Solusi Persamaan Linear<a class="headerlink" href="#solusi-persamaan-linear" title="Link to this heading">#</a></h1>
+<p>Solusi persamaan linear adalah nilai dari variabel yang memenuhi persamaan tersebut. Cara menyelesaikan persamaan linear tergantung pada jumlah variabelnya. Solusinya bisa tunggal, banyak, atau tidak ada</p>
+<section id="satu-solusi">
+<h2>Satu Solusi<a class="headerlink" href="#satu-solusi" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Terjadi jika dua atau lebih persamaan dalam sistem memiliki satu titik potong.</p></li>
+<li><p>Dalam sistem persamaan linear dua variabel (SPLDV), ini berarti dua garis memiliki gradien berbeda dan berpotongan di satu titik.</p></li>
+<li><p>Dalam sistem persamaan linear tiga variabel (SPLTV), ini berarti tiga bidang berpotongan di satu titik.</p></li>
+</ul>
+<p>contoh:</p>
+<p>5x+2y=15</p>
+<p>x+4y=20</p>
+<iframe src="https://www.geogebra.org/calculator/pkgpygkq?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe></section>
+<section id="banyak-solusi">
+<h2>Banyak Solusi<a class="headerlink" href="#banyak-solusi" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Terjadi jika dua persamaan dalam sistem sama atau identik, yang berarti mereka memiliki gradien dan titik potong yang sama.</p></li>
+<li><p>Dalam SPLDV, ini berarti kedua garis berimpit (sama persis).</p></li>
+<li><p>Dalam SPLTV, ini berarti tiga bidang berimpit atau membentuk satu garis perpotongan tak terbatas.</p></li>
+</ul>
+<p>contoh:</p>
+<p>5x+2y=10</p>
+<p>10x+4y=20</p>
+<iframe src="https://www.geogebra.org/calculator/hyxu9bmz?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe></section>
+<section id="tidak-ada-solusi">
+<h2>Tidak Ada Solusi<a class="headerlink" href="#tidak-ada-solusi" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Terjadi jika dua atau lebih persamaan dalam sistem tidak memiliki titik potong.</p></li>
+<li><p>Dalam SPLDV, ini berarti dua garis sejajar (gradien sama tetapi titik potong berbeda).</p></li>
+<li><p>Dalam SPLTV, ini berarti tiga bidang tidak memiliki titik perpotongan bersama.</p></li>
+</ul>
+<p>contoh:</p>
+<p>5x+2y=15</p>
+<p>10x+4y=20</p>
+<iframe src="https://www.geogebra.org/calculator/tjdjpyee?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -467,12 +464,21 @@ Metode Eliminasi: Menambah atau mengurangi persamaan untuk menghilangkan satu va
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
+    <a class="left-prev"
        href="markdown.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Definisi Persamaan Linear</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="markdown-notebooks.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Definisi Persamaan Linear</p>
+        <p class="prev-next-title">Eliminasi Persamaan Linear</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -492,9 +498,9 @@ Metode Eliminasi: Menambah atau mengurangi persamaan untuk menghilangkan satu va
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-sistem-persamaan-linear">1. Apa itu Sistem Persamaan Linear?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-sistem-persamaan-linear">2. Jenis-jenis Sistem Persamaan Linear</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-penyelesaian">3. Metode Penyelesaian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#satu-solusi">Satu Solusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#banyak-solusi">Banyak Solusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tidak-ada-solusi">Tidak Ada Solusi</a></li>
 </ul>
   </nav></div>
 

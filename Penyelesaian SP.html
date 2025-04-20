@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Sistem Persamaan Linear &#8212; My sample book</title>
+    <title>Penyelesaian Sistem Persamaan Linear &#8212; My sample book</title>
   
   
   
@@ -59,10 +59,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Penyelesaian SP';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Definisi Persamaan Linear" href="markdown.html" />
+    <link rel="next" title="Matrix" href="matrix.html" />
+    <link rel="prev" title="Eliminasi Persamaan Linear" href="markdown-notebooks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,8 +126,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -145,7 +144,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -176,19 +175,19 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Sistem Persamaan Linear
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Definisi Persamaan Linear</a></li>
 
 
 <li class="toctree-l1"><a class="reference internal" href="notebook.html">Solusi Persamaan Linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Eliminasi Persamaan Linear</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Penyelesaian%20SP.html">Penyelesaian Sistem Persamaan Linear</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Penyelesaian Sistem Persamaan Linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrix.html">Matrix</a></li>
 </ul>
 
@@ -261,7 +260,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FPenyelesaian SP.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +290,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Penyelesaian SP.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -375,7 +374,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Sistem Persamaan Linear</h1>
+    <h1>Penyelesaian Sistem Persamaan Linear</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -385,9 +384,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-sistem-persamaan-linear">1. Apa itu Sistem Persamaan Linear?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-sistem-persamaan-linear">2. Jenis-jenis Sistem Persamaan Linear</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-penyelesaian">3. Metode Penyelesaian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris-elementer">Operasi Baris Elementer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eleminasi-gauss">Eleminasi Gauss</a></li>
 </ul>
             </nav>
         </div>
@@ -399,42 +397,350 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="sistem-persamaan-linear">
-<h1>Sistem Persamaan Linear<a class="headerlink" href="#sistem-persamaan-linear" title="Link to this heading">#</a></h1>
-<section id="apa-itu-sistem-persamaan-linear">
-<h2>1. Apa itu Sistem Persamaan Linear?<a class="headerlink" href="#apa-itu-sistem-persamaan-linear" title="Link to this heading">#</a></h2>
-<p>Sistem persamaan linear adalah kumpulan persamaan yang memiliki variabel yang sama.
-Contohnya, jika kita punya dua persamaan:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2x+3y=6
-4x−y=7
-</pre></div>
-</div>
-<p>Ini adalah sistem persamaan linear karena ada dua persamaan yang mengandung variabel x dan y.</p>
+  <section id="penyelesaian-sistem-persamaan-linear">
+<h1>Penyelesaian Sistem Persamaan Linear<a class="headerlink" href="#penyelesaian-sistem-persamaan-linear" title="Link to this heading">#</a></h1>
+<p>Penyelesaian Sistem Persamaan Linear (SPL) dapat dilakukan dengan beberapa metode, tergantung pada jumlah variabel dan karakteristik sistemnya.</p>
+<ul class="simple">
+<li><p>Metode Substitusi → Cocok untuk sistem dengan 2 variabel.</p></li>
+<li><p>Metode Eliminasi → Cocok untuk sistem dengan lebih dari 2 variabel.</p></li>
+<li><p>Metode Matriks → Efisien untuk sistem yang lebih besar.</p></li>
+<li><p>Metode Grafik → Hanya cocok untuk visualisasi pada sistem 2 variabel.</p></li>
+</ul>
+<section id="operasi-baris-elementer">
+<h2>Operasi Baris Elementer<a class="headerlink" href="#operasi-baris-elementer" title="Link to this heading">#</a></h2>
+<p>Operasi Baris Elementer (OBE) adalah teknik yang digunakan dalam manipulasi matriks untuk menyelesaikan sistem persamaan linear, menemukan invers matriks, dan berbagai aplikasi lainnya.</p>
+<ul class="simple">
+<li><p>Operasi Baris Elementer (OBE) digunakan untuk menyelesaikan SPL, menghitung invers matriks, dan berbagai manipulasi matriks lainnya.</p></li>
+<li><p>Terdapat tiga operasi utama: pertukaran baris, perkalian baris dengan skalar, dan penjumlahan baris.</p></li>
+<li><p>OBE adalah dasar dari metode Eliminasi Gauss, Eliminasi Gauss-Jordan, dan metode matriks lainnya.</p></li>
+</ul>
 </section>
-<section id="jenis-jenis-sistem-persamaan-linear">
-<h2>2. Jenis-jenis Sistem Persamaan Linear<a class="headerlink" href="#jenis-jenis-sistem-persamaan-linear" title="Link to this heading">#</a></h2>
-<p>Dua variabel: Misalnya x dan y. Contoh:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x+y=10
-2x−y=5
-</pre></div>
-</div>
-<p>Tiga variabel: Misalnya x,y,z. Contoh:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x+y+z=6
-2x−y+3z=14
-x−4y−z=2
-</pre></div>
-</div>
+<section id="eleminasi-gauss">
+<h2>Eleminasi Gauss<a class="headerlink" href="#eleminasi-gauss" title="Link to this heading">#</a></h2>
+<p>Metode Eliminasi Gauss adalah teknik penyelesaian Sistem Persamaan Linear (SPL) dengan mengubah matriks augmented ke bentuk segitiga atas menggunakan Operasi Baris Elementer (OBE).</p>
+<ul class="simple">
+<li><p>Eliminasi Gauss digunakan untuk mengubah matriks augmented menjadi bentuk segitiga atas</p></li>
+<li><p>Setelah bentuk segitiga atas diperoleh, digunakan substitusi balik untuk menyelesaikan sistem</p></li>
+<li><p>Metode ini lebih cepat dibanding substitusi biasa, terutama untuk sistem dengan banyak variabel</p></li>
+</ul>
+<p>Contoh Soal 1</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{cc}
+x_1+2x_2+3x_3=6\\
+2x_1+4x_2+6x_3=12\\
+x_3+x_2=2
+\end{array}
+\end{split}\]</div>
+<p>Penyelesaian:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{cc}
+x_1 + 2x_2 + 3x_3 = 6 \\
+2x_1 + 4x_2 + 6x_3 = 12 \\
+x_3 + x_2 = 2
+\end{array}
+\end{split}\]</div>
+<p>Matriks augmented:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; | &amp; 6 \\
+2 &amp; 4 &amp; 6 &amp; | &amp; 12 \\
+0 &amp; 1 &amp; 1 &amp; | &amp; 2
+\end{bmatrix}
+\end{split}\]</div>
+<p>Baris kedua dikurangi 2 kali baris pertama:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; | &amp; 6 \\
+0 &amp; 0 &amp; 0 &amp; | &amp; 0 \\
+0 &amp; 1 &amp; 1 &amp; | &amp; 2
+\end{bmatrix}
+\end{split}\]</div>
+<p>Maka,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x_1 + 2x_2 + 3x_3 + 6 = x_1 + 2(2 - x_3) + 3x_3 = 6 \\
+x_1+ 4 -2x_2 + 3x_3 = 6 \\
+x_1+x_3 = 6 - 4 \\
+x_1 = 2 - x_3
+\end{split}\]</div>
+<p>Karna ada variabel bebas <span class="math notranslate nohighlight">\(x_3 = t \)</span> Sehingga, solusi umum dari sistem persamaan tersebut adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x_1 &amp;= 2-t, \\
+x_2 &amp;= 2-t, \\
+x_3 &amp;= t, \quad t \in \mathbb{R}.
+\end{aligned}
+\end{split}\]</div>
+<hr class="docutils" />
+<p>Contoh Soal 2</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{cc}
+x_1+x_2+x_3=3\\
+2x_1+x_3=5\\
+x_1+2x_2=3
+\end{array}
+\end{split}\]</div>
+<p>Penyelesaian :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{ccc|c}
+1 &amp; 1 &amp; 1 &amp; 3 \\
+2 &amp; 0 &amp; 1 &amp; 5 \\
+1 &amp; 2 &amp; 0 &amp; 3
+\end{array}
+\end{split}\]</div>
+<p>Langkah 1: Eliminasi Baris Pertama
+Kita akan mengeliminasi elemen di bawah elemen pertama pada kolom pertama dengan mengurangi baris kedua dengan 2 kali baris pertama dan mengurangi baris ketiga dengan baris pertama.</p>
+<ul class="simple">
+<li><p>Baris 2 → Baris 2 - 2 × Baris 1</p></li>
+<li><p>Baris 3 → Baris 3 - Baris 1</p></li>
+</ul>
+<p>Maka hasilnya adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{ccc|c}
+1 &amp; 1 &amp; 1 &amp; 3 \\
+0 &amp; -2 &amp; -1 &amp; -1 \\
+0 &amp; 1 &amp; -1 &amp; 0
+\end{array}
+\end{split}\]</div>
+<p>Langkah 2: Eliminasi Baris Kedua
+Sekarang kita akan mengeliminasi elemen di bawah elemen kedua pada kolom kedua dengan menambah baris ketiga dengan setengah baris kedua.</p>
+<ul class="simple">
+<li><p>Baris 3 → Baris 3 + 1/2 dikali baris 2</p></li>
+</ul>
+<p>Hasilnya adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{ccc|c}
+1 &amp; 1 &amp; 1 &amp; 3 \\
+0 &amp; -2 &amp; -1 &amp; -1 \\
+0 &amp; 0 &amp; -\frac{3}{2} &amp; -\frac{1}{2}
+\end{array}
+\end{split}\]</div>
+<p>Langkah 3: Normalisasi Baris Ketiga
+Kita akan mengalikan baris ketiga dengan <span class="math notranslate nohighlight">\((-\frac{2}{3})\)</span> untuk menjadikan elemen di baris ketiga, kolom ketiga menjadi 1:</p>
+<ul class="simple">
+<li><p>Baris 3 → -2/3 dikali baris 3</p></li>
+</ul>
+<p>Hasilnya menjadi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{ccc|c}
+1 &amp; 1 &amp; 1 &amp; 3 \\
+0 &amp; -2 &amp; -1 &amp; -1 \\
+0 &amp; 0 &amp; 1 &amp; \frac{1}{3}
+\end{array}
+\end{split}\]</div>
+<p>Langkah 4: Eliminasi Kolom Ketiga
+Sekarang kita akan mengeliminasi elemen-elemen di atas kolom ketiga.</p>
+<ul class="simple">
+<li><p>Baris 1 → Baris 1 - Baris 3</p></li>
+<li><p>Baris 2 → Baris 2 + Baris 3</p></li>
+</ul>
+<p>Maka hasilnya adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{ccc|c}
+1 &amp; 1 &amp; 0 &amp; \frac{8}{3} \\
+0 &amp; -2 &amp; 0 &amp; -\frac{2}{3} \\
+0 &amp; 0 &amp; 1 &amp; \frac{1}{3}
+\end{array}
+\end{split}\]</div>
+<p>Langkah 5: Normalisasi Baris Kedua
+Kita akan mengalikan baris kedua dengan -1/2 untuk menjadikan elemen di baris kedua, kolom kedua menjadi 1:</p>
+<ul class="simple">
+<li><p>Baris 2 → -1/2 x baris 2</p></li>
+</ul>
+<p>Hasilnya menjadi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{ccc|c}
+1 &amp; 1 &amp; 0 &amp; \frac{8}{3} \\
+0 &amp; 1 &amp; 0 &amp; \frac{1}{3} \\
+0 &amp; 0 &amp; 1 &amp; \frac{1}{3}
+\end{array}
+\end{split}\]</div>
+<p>Langkah 6: Eliminasi Kolom Kedua
+Sekarang kita akan mengeliminasi elemen di atas kolom kedua.</p>
+<ul class="simple">
+<li><p>Baris 1 → Baris 1 - Baris 2</p></li>
+</ul>
+<p>Hasil akhirnya menjadi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{ccc|c}
+1 &amp; 0 &amp; 0 &amp; \frac{7}{3} \\
+0 &amp; 1 &amp; 0 &amp; \frac{1}{3} \\
+0 &amp; 0 &amp; 1 &amp; \frac{1}{3}
+\end{array}
+\end{split}\]</div>
+<p>Solusi akhir dari persamaan diatas adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{cc}
+x_1=\frac{7}{3} \\
+x_2=\frac{1}{3} \\
+x_3=\frac{1}{3}
+\end{array}
+\end{split}\]</div>
+<iframe src="https://www.geogebra.org/classic/jmccwhfc?embed" width="840" height="540" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+<hr class="docutils" />
+<p>Contoh Soal 3</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{cc}
+2x_1+2x_2=4\\
+x_1+x_2=2
+\end{array}
+\end{split}\]</div>
+<p>Penyelesaian :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{cc}
+2x_1 + 2x_2 = 4 \quad (1) \\
+x_1 + x_2 = 2 \quad (2)
+\end{array}
+\end{split}\]</div>
+<p>matriks augmented:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+2 &amp; 2 &amp; | &amp; 4 \\
+1 &amp; 1 &amp; | &amp; 2
+\end{bmatrix}
+\end{split}\]</div>
+<p>Membuat elemen di bawah pivot menjadi nol. Kita dapat melakukannya dengan mengurangi baris pertama dengan dua kali baris kedua:</p>
+<div class="math notranslate nohighlight">
+\[ R_1 - 2R_2 \rightarrow R_1 \]</div>
+<p>Maka:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+R_1: \quad 2 - 2 \cdot 1 = 0 \\
+2 - 2 \cdot 1 = 0 \\
+4 - 2 \cdot 2 = 0
+\end{split}\]</div>
+<p>Sehingga:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+0 &amp; 0 &amp; | &amp; 0 \\
+1 &amp; 1 &amp; | &amp; 2
+\end{bmatrix}
+\end{split}\]</div>
+<p>Matriks ini menunjukkan bahwa kita memiliki satu persamaan yang valid dan satu persamaan yang identik (0 = 0). Dari baris kedua, kita dapat menuliskan persamaan:</p>
+<div class="math notranslate nohighlight">
+\[
+x_1 + x_2 = 2 \quad (2)
+\]</div>
+<p>Karena baris pertama adalah 0 = 0, ini menunjukkan bahwa sistem ini memiliki solusi tak terhingga. Kita dapat menyelesaikan untuk salah satu variabel. Misalkan kita menyelesaikan untuk <span class="math notranslate nohighlight">\((x_1)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ x_1 = 2 - x_2 \]</div>
+<p>Dengan demikian, solusi umum untuk sistem persamaan ini adalah:</p>
+<div class="math notranslate nohighlight">
+\[
+(x_1, x_2) = (2 - x_2, x_2) \quad \text{untuk setiap } x_2 \in \mathbb{R}
+\]</div>
+<p>Sebagai contoh, jika kita memilih <span class="math notranslate nohighlight">\((x_2 = 0)\)</span>, maka:</p>
+<div class="math notranslate nohighlight">
+\[
+x_1 = 2 - 0 = 2 \quad \Rightarrow \quad (x_1, x_2) = (2, 0)
+\]</div>
+<p>Jika kita memilih <span class="math notranslate nohighlight">\((x_2 = 1)\)</span>, maka:</p>
+<div class="math notranslate nohighlight">
+\[
+x_1 = 2 - 1 = 1 \quad \Rightarrow \quad (x_1, x_2) = (1, 1)
+\]</div>
+<p>Dan jika kita memilih <span class="math notranslate nohighlight">\((x_2 = 2)\)</span>, maka:</p>
+<div class="math notranslate nohighlight">
+\[
+x_1 = 2 - 2 = 0 \quad \Rightarrow \quad (x_1, x_2) = (0, 2)
+\]</div>
+<p>Dengan demikian, solusi dari sistem persamaan ini adalah semua pasangan <span class="math notranslate nohighlight">\((x_1, x_2)\)</span> yang memenuhi:</p>
+<div class="math notranslate nohighlight">
+\[
+(x_1, x_2) = (2 - x_2, x_2) \quad \text{untuk setiap } x_2 \in \mathbb{R}
+\]</div>
+<hr class="docutils" />
+<p>Contoh Soal 4</p>
+<p>Diberikan sistem persamaan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x_1 + x_2 = 5 \\
+x_1 + 2x_3 = 6
+\end{aligned}
+\end{split}\]</div>
+<p>Kita akan menyelesaikannya menggunakan metode eliminasi Gauss. Pertama, kita tuliskan sistem ini dalam bentuk matriks augmented:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 1 &amp; 0 &amp; | &amp; 5 \\
+1 &amp; 0 &amp; 2 &amp; | &amp; 6
+\end{bmatrix}
+\end{split}\]</div>
+<p>Langkah pertama adalah membuat elemen di bawah pivot (elemen pertama di kolom pertama) menjadi nol. Kita lakukan operasi berikut:</p>
+<div class="math notranslate nohighlight">
+\[
+R_2 - R_1 \rightarrow R_2
+\]</div>
+<p>Setelah melakukan perhitungan, kita mendapatkan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+R_2: \quad 1 - 1 = 0 \\
+0 - 1 = -1 \\
+2 - 0 = 2 \\
+6 - 5 = 1
+\end{split}\]</div>
+<p>Sehingga, matriks augmented menjadi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 1 &amp; 0 &amp; | &amp; 5 \\
+0 &amp; -1 &amp; 2 &amp; | &amp; 1
+\end{bmatrix}
+\end{split}\]</div>
+<p>Selanjutnya, kita dapat menyelesaikan baris kedua untuk mengekspresikan <span class="math notranslate nohighlight">\((x_2)\)</span> dalam bentuk <span class="math notranslate nohighlight">\((x_3)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+-1x_2 + 2x_3 = 1 \implies x_2 = 2x_3 - 1
+\]</div>
+<p>Sekarang kita substitusi <span class="math notranslate nohighlight">\((x_2)\)</span> ke dalam persamaan pertama:</p>
+<div class="math notranslate nohighlight">
+\[
+x_1 + (2x_3 - 1) = 5
+\]</div>
+<p>Maka kita dapatkan:</p>
+<div class="math notranslate nohighlight">
+\[
+x_1 + 2x_3 - 1 = 5 \implies x_1 = 6 - 2x_3
+\]</div>
+<p>Karena kita memiliki dua persamaan dengan tiga variabel, kita dapat menyatakan solusi dalam bentuk parameter. Misalkan <span class="math notranslate nohighlight">\((x_3 = p)\)</span>, maka:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x_1 = 6 - 2p \\
+x_2 = 2p - 1 \\
+x_3 = p
+\end{aligned}
+\end{split}\]</div>
+<p>Jadi, solusi umum dari sistem persamaan ini adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+x_1 = 6 - 2p \\
+x_2 = 2p - 1 \\
+x_3 = p
+\end{cases}
+\end{split}\]</div>
+<p>di mana (p) adalah parameter bebas.</p>
 </section>
-<section id="metode-penyelesaian">
-<h2>3. Metode Penyelesaian<a class="headerlink" href="#metode-penyelesaian" title="Link to this heading">#</a></h2>
-<p>Ada beberapa cara untuk menyelesaikan sistem persamaan linear:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Metode Substitusi: Menyelesaikan salah satu persamaan untuk satu variabel, lalu mengganti variabel tersebut ke persamaan lainnya.
-Metode Eliminasi: Menambah atau mengurangi persamaan untuk menghilangkan satu variabel.
-</pre></div>
-</div>
-</section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -467,12 +773,21 @@ Metode Eliminasi: Menambah atau mengurangi persamaan untuk menghilangkan satu va
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="markdown-notebooks.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Eliminasi Persamaan Linear</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="markdown.html"
+       href="matrix.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Definisi Persamaan Linear</p>
+        <p class="prev-next-title">Matrix</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -492,9 +807,8 @@ Metode Eliminasi: Menambah atau mengurangi persamaan untuk menghilangkan satu va
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-sistem-persamaan-linear">1. Apa itu Sistem Persamaan Linear?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-sistem-persamaan-linear">2. Jenis-jenis Sistem Persamaan Linear</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-penyelesaian">3. Metode Penyelesaian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris-elementer">Operasi Baris Elementer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eleminasi-gauss">Eleminasi Gauss</a></li>
 </ul>
   </nav></div>
 
