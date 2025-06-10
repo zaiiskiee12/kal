@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Eliminasi Persamaan Linear &#8212; My sample book</title>
+    <title>Notebooks with MyST Markdown &#8212; My sample book</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -57,13 +57,10 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'markdown-notebooks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Penyelesaian Sistem Persamaan Linear" href="Penyelesaian%20SP.html" />
-    <link rel="prev" title="Solusi Persamaan Linear" href="notebook.html" />
+    <link rel="prev" title="Content with notebooks" href="notebooks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -155,8 +152,8 @@
       
     
     
-    <img src="_static/logo.jpg" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
   
 </a></div>
@@ -177,18 +174,14 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Sistem Persamaan Linear
+                    Welcome to your Jupyter Book
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Definisi Persamaan Linear</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="notebook.html">Solusi Persamaan Linear</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Eliminasi Persamaan Linear</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Penyelesaian%20SP.html">Penyelesaian Sistem Persamaan Linear</a></li>
-<li class="toctree-l1"><a class="reference internal" href="matrix.html">Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Notebooks with MyST Markdown</a></li>
 </ul>
 
     </div>
@@ -374,7 +367,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Eliminasi Persamaan Linear</h1>
+    <h1>Notebooks with MyST Markdown</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -384,14 +377,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-metode-eliminasi">Langkah-Langkah Metode Eliminasi</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#samakan-koefisien-salah-satu-variabel">1. Samakan koefisien salah satu variabel</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kurangkan-atau-jumlahkan-kedua-persamaan">2. Kurangkan atau jumlahkan kedua persamaan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selesaikan-persamaan-satu-variabel">3. Selesaikan persamaan satu variabel</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#substitusi-nilai-variabel-yang-ditemukan">4. Substitusi nilai variabel yang ditemukan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh"><strong>Contoh:</strong></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-cell">An example cell</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">Create a notebook with MyST Markdown</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">Quickly add YAML metadata for MyST Notebooks</a></li>
 </ul>
             </nav>
         </div>
@@ -403,113 +391,50 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="eliminasi-persamaan-linear">
-<h1>Eliminasi Persamaan Linear<a class="headerlink" href="#eliminasi-persamaan-linear" title="Link to this heading">#</a></h1>
-<p>Eliminasi dalam persamaan linear adalah salah satu metode untuk menyelesaikan sistem persamaan linear dengan menghilangkan salah satu variabel sehingga persamaan dapat disederhanakan menjadi satu variabel saja.</p>
-<section id="langkah-langkah-metode-eliminasi">
-<h2>Langkah-Langkah Metode Eliminasi<a class="headerlink" href="#langkah-langkah-metode-eliminasi" title="Link to this heading">#</a></h2>
-<p>Misalkan kita memiliki sistem persamaan linear dua variabel berikut:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-a_1x+b_1y = c_1\\
-a_2x+b_2y = c_2
-\end{aligned}
-\end{split}\]</div>
-<section id="samakan-koefisien-salah-satu-variabel">
-<h3>1. Samakan koefisien salah satu variabel<a class="headerlink" href="#samakan-koefisien-salah-satu-variabel" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>pilih variabel yang akan dieliminasi (misalnya, <span class="math notranslate nohighlight">\(x\)</span> atau <span class="math notranslate nohighlight">\(y\)</span> ).</p></li>
-<li><p>Kalikan salah satu atau kedua persamaan dengan bilangan tertentu sehingga koefisien variabel tersebut menjadi sama.</p></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="notebooks-with-myst-markdown">
+<h1>Notebooks with MyST Markdown<a class="headerlink" href="#notebooks-with-myst-markdown" title="Link to this heading">#</a></h1>
+<p>Jupyter Book also lets you write text-based notebooks using MyST Markdown.
+See <a class="reference external" href="https://jupyterbook.org/file-types/myst-notebooks.html">the Notebooks with MyST Markdown documentation</a> for more detailed instructions.
+This page shows off a notebook written in MyST Markdown.</p>
+<section id="an-example-cell">
+<h2>An example cell<a class="headerlink" href="#an-example-cell" title="Link to this heading">#</a></h2>
+<p>With MyST Markdown, you can define code cells with a directive like so:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<p>When your book is built, the contents of any <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> blocks will be
+executed with your default Jupyter kernel, and their outputs will be displayed
+in-line with the rest of your content.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Jupyter Book uses <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/">Jupytext</a> to convert text-based files to notebooks, and can support <a class="reference external" href="https://jupyterbook.org/file-types/jupytext.html">many other text-based notebook files</a>.</p>
+</div>
 </section>
-<section id="kurangkan-atau-jumlahkan-kedua-persamaan">
-<h3>2. Kurangkan atau jumlahkan kedua persamaan<a class="headerlink" href="#kurangkan-atau-jumlahkan-kedua-persamaan" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Jika koefisien variabel yang akan dieliminasi sama, gunakan operasi pengurangan atau penjumlahan untuk menghilangkannya.</p></li>
-<li><p>Ini akan menghasilkan persamaan baru dengan satu variabel saja.</p></li>
-</ul>
+<section id="create-a-notebook-with-myst-markdown">
+<h2>Create a notebook with MyST Markdown<a class="headerlink" href="#create-a-notebook-with-myst-markdown" title="Link to this heading">#</a></h2>
+<p>MyST Markdown notebooks are defined by two things:</p>
+<ol class="arabic simple">
+<li><p>YAML metadata that is needed to understand if / how it should convert text files to notebooks (including information about the kernel needed).
+See the YAML at the top of this page for example.</p></li>
+<li><p>The presence of <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> directives, which will be executed with your book.</p></li>
+</ol>
+<p>That’s all that is needed to get started!</p>
 </section>
-<section id="selesaikan-persamaan-satu-variabel">
-<h3>3. Selesaikan persamaan satu variabel<a class="headerlink" href="#selesaikan-persamaan-satu-variabel" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Setelah didapat persamaan dengan satu variabel, selesaikan persamaan tersebut untuk menetukan nilai variabelnya.</p></li>
-</ul>
-</section>
-<section id="substitusi-nilai-variabel-yang-ditemukan">
-<h3>4. Substitusi nilai variabel yang ditemukan<a class="headerlink" href="#substitusi-nilai-variabel-yang-ditemukan" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Masukkan nilai variabel yang telah ditemukan ke salah satu persamaan awal untuk mendapatkan nilai variabel lainnya.</p></li>
-</ul>
-</section>
-<section id="contoh">
-<h3><strong>Contoh:</strong><a class="headerlink" href="#contoh" title="Link to this heading">#</a></h3>
-<p>Selesaikan sistem persamaan berikut menggunakan metode eliminasi:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-2x + 3y = 12\\
-4x - y = 5
-\end{aligned}
-\end{split}\]</div>
-<p>Langkah 1:</p>
-<p>Samakan koefisien salah satu variabel. Kita pilih variabel <span class="math notranslate nohighlight">\(x\)</span> untuk dieliminasi</p>
-<p>Koefisien <span class="math notranslate nohighlight">\(x\)</span> pada persamaan pertama adalah 2 dan pada persamaan kedua adalah 4. Agar sama, kalikan persamaan pertama dengan 2:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-(2x + 3y = 12) \times 2 \\
-4x - y = 5
-\end{aligned}
-\end{split}\]</div>
-<p>Sekarang sistem persamaannya menjadi:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-4x + 6y = 24\\
-4x - y = 5
-\end{aligned}
-\end{split}\]</div>
-<p>Langkah 2:</p>
-<p>Kurangkan kedua persamaan:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-(4x + 6y) - (4x - y) = 24 - 5 \\
-4x + 6y - 4x - y = 19 \\
-7_y = 19
-\end{aligned}
-\end{split}\]</div>
-<p>Langkah 3:</p>
-<p>Selesaikan variabel <span class="math notranslate nohighlight">\(y\)</span> :</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{aligned}
-y = \frac{19}{7}
-\end{aligned}
-\]</div>
-<p>Langkah 4:</p>
-<p>Substitusi ke salah satu persamaan awal. Gunakan persamaan pertama:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-2x + 3y = 12 \\
-2x + 3 \times \frac{19}{7} = 12 \\
-2x + \frac{57}{7} = 12 \\
-2x = 12 - \frac{57}{7} \\
-2x = \frac{84}{7} - \frac{57}{7} \\
-2x = \frac{27}{7} \\
-x = \frac{27}{14}
-\end{aligned}
-\end{split}\]</div>
-<p>Jadi, solusi persamaan tersebut adalah</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{aligned}
-(\frac{27}{14} , \frac{19}{7})
-\end{aligned}
-\]</div>
-</section>
+<section id="quickly-add-yaml-metadata-for-myst-notebooks">
+<h2>Quickly add YAML metadata for MyST Notebooks<a class="headerlink" href="#quickly-add-yaml-metadata-for-myst-notebooks" title="Link to this heading">#</a></h2>
+<p>If you have a markdown file and you’d like to quickly add YAML metadata to it, so that Jupyter Book will treat it as a MyST Markdown Notebook, run the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">myst</span> <span class="n">init</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">markdownfile</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -544,22 +469,13 @@ x = \frac{27}{14}
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="notebook.html"
+       href="notebooks.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Solusi Persamaan Linear</p>
+        <p class="prev-next-title">Content with notebooks</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="Penyelesaian%20SP.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Penyelesaian Sistem Persamaan Linear</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -577,14 +493,9 @@ x = \frac{27}{14}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-metode-eliminasi">Langkah-Langkah Metode Eliminasi</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#samakan-koefisien-salah-satu-variabel">1. Samakan koefisien salah satu variabel</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kurangkan-atau-jumlahkan-kedua-persamaan">2. Kurangkan atau jumlahkan kedua persamaan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selesaikan-persamaan-satu-variabel">3. Selesaikan persamaan satu variabel</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#substitusi-nilai-variabel-yang-ditemukan">4. Substitusi nilai variabel yang ditemukan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh"><strong>Contoh:</strong></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-cell">An example cell</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">Create a notebook with MyST Markdown</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">Quickly add YAML metadata for MyST Notebooks</a></li>
 </ul>
   </nav></div>
 
@@ -599,7 +510,7 @@ x = \frac{27}{14}
   <div class="footer-item">
     
 <p class="component-author">
-By zaidan
+By The Jupyter Book Community
 </p>
 
   </div>
@@ -609,7 +520,7 @@ By zaidan
 
   <p class="copyright">
     
-      © Copyright 2025.
+      © Copyright 2023.
       <br/>
     
   </p>
