@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Definisi Persamaan Linear &#8212; My sample book</title>
+    <title>Eigenvalue dan Eigenvector &#8212; My sample book</title>
   
   
   
@@ -59,11 +59,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'markdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Eigen_value_vector';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Solusi Persamaan Linear" href="notebook.html" />
-    <link rel="prev" title="Sistem Persamaan Linear" href="intro.html" />
+    <link rel="next" title="Cross Product" href="kali_silang.html" />
+    <link rel="prev" title="Tugas KAL" href="TKAL.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,7 +182,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Definisi Persamaan Linear</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Definisi Persamaan Linear</a></li>
 
 
 <li class="toctree-l1"><a class="reference internal" href="notebook.html">Solusi Persamaan Linear</a></li>
@@ -195,7 +195,7 @@
 
 
 <li class="toctree-l1"><a class="reference internal" href="TKAL.html">Tugas KAL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Eigen_value_vector.html">Eigenvalue dan Eigenvector</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Eigenvalue dan Eigenvector</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="kali_silang.html">Cross Product</a></li>
 </ul>
@@ -269,7 +269,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmarkdown.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FEigen_value_vector.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +299,7 @@
       
       
       
-      <li><a href="_sources/markdown.md" target="_blank"
+      <li><a href="_sources/Eigen_value_vector.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -309,7 +309,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -383,7 +383,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Definisi Persamaan Linear</h1>
+    <h1>Eigenvalue dan Eigenvector</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -393,17 +393,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Definisi Persamaan Linear</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-persamaan-linear">Jenis Persamaan Linear</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-persamaan-linear-satu-variabel-plsv">a) Persamaan Linear Satu Variabel (PLSV)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-persamaan-linear-dua-variabel-pldv">b) Persamaan Linear Dua Variabel (PLDV)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-persamaan-linear-tiga-variabel-atau-lebih">c) Persamaan Linear Tiga Variabel atau Lebih</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-persamaan-linear">Sifat-Sifat Persamaan Linear</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabel-memiliki-pangkat-1">Variabel memiliki pangkat 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grafiknya-selalu-berupa-garis-lurus">Grafiknya selalu berupa garis lurus</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusinya-bisa-tunggal-banyak-atau-tidak-ada">Solusinya bisa tunggal, banyak, atau tidak ada</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Eigenvalue dan Eigenvector</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi">Definisi</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-a">1. Matriks A</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-b">2. Matriks B</a></li>
 </ul>
 </li>
 </ul>
@@ -418,93 +411,190 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="definisi-persamaan-linear">
-<h1>Definisi Persamaan Linear<a class="headerlink" href="#definisi-persamaan-linear" title="Link to this heading">#</a></h1>
-<p>Persamaan linear adalah sebuah persamaan matematika yang hubungan antara variabelnya membentuk garis lurus jika digambarkan dalam grafik. Biasanya, persamaan linear memiliki bentuk umum seperti:
-<span class="math notranslate nohighlight">\(a_1 x_1 + a_2 x_2 +......+a_n x_n\)</span> = b</p>
-<p>Di mana:
-<span class="math notranslate nohighlight">\(x_1,x_2​,…,x_n\)</span>​ adalah variabel.
-<span class="math notranslate nohighlight">\(a_1​,a_2,…,a_n\)</span>​ adalah koefisien (angka yang mengalikan variabel).
-b adalah konstanta (angka tetap).</p>
-<p>Contoh sederhana:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2x+3=02x+3=0 adalah persamaan linear dengan satu variabel x.
-4x+2y=104x+2y=10 adalah persamaan linear dengan dua variabel x dan y.
-</pre></div>
-</div>
-<p>Ciri utama persamaan linear adalah bahwa variabelnya tidak memiliki eksponen selain 1 (misalnya, <span class="math notranslate nohighlight">\(x^2\)</span> atau <span class="math notranslate nohighlight">\(y^3\)</span> tidak ada dalam persamaan linear). Jika ada lebih dari satu variabel, solusinya adalah titik-titik yang saling berhubungan dalam bentuk garis lurus di grafik.</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="jenis-persamaan-linear">
-<h1>Jenis Persamaan Linear<a class="headerlink" href="#jenis-persamaan-linear" title="Link to this heading">#</a></h1>
-<p>Persamaan linear dapat diklasifikasikan berdasarkan jumlah variabelnya:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="eigenvalue-dan-eigenvector">
+<h1>Eigenvalue dan Eigenvector<a class="headerlink" href="#eigenvalue-dan-eigenvector" title="Link to this heading">#</a></h1>
 <ul class="simple">
-<li><p>Persamaan Linear Satu Variabel (PLSV)</p></li>
-<li><p>Persamaan Linear Dua Variabel (PLDV)</p></li>
-<li><p>Persamaan Linear Tiga Variabel atau Lebih</p></li>
-</ul>
-<section id="a-persamaan-linear-satu-variabel-plsv">
-<h2>a) Persamaan Linear Satu Variabel (PLSV)<a class="headerlink" href="#a-persamaan-linear-satu-variabel-plsv" title="Link to this heading">#</a></h2>
-<p>Merupakan persamaan yang hanya memiliki satu variabel, berbentuk:</p>
-<p>ax+b=0</p>
-<p>Contoh:</p>
-<p>2x+3=0
-Penyelesaian: x = -<span class="math notranslate nohighlight">\(\frac{3}{2}\)</span></p>
-<p>Secara grafis, persamaan ini dapat direpresentasikan sebagai garis lurus pada sumbu-x (jika hanya ada satu variabel x).</p>
-</section>
-<section id="b-persamaan-linear-dua-variabel-pldv">
-<h2>b) Persamaan Linear Dua Variabel (PLDV)<a class="headerlink" href="#b-persamaan-linear-dua-variabel-pldv" title="Link to this heading">#</a></h2>
-<p>Persamaan dengan dua variabel memiliki bentuk:
-ax+by=c</p>
-<p>Contoh:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>4x+2y=10
-</pre></div>
-</div>
-<p>Solusinya berupa himpunan pasangan bilangan (x,y) yang memenuhi persamaan tersebut. Jika digambarkan dalam sistem koordinat Kartesius, persamaan ini membentuk garis lurus.</p>
-<p>Untuk menentukan titik potong dengan sumbu-x dan sumbu-y:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Jika y=0, maka 4x=10 → x=2.5 (titik potong dengan sumbu-x adalah (2.5,0)).
-Jika x=0, maka 2y=10 → y=5 (titik potong dengan sumbu-y adalah (0,5)).
-</pre></div>
-</div>
-<p>Grafik persamaan ini adalah garis lurus yang melewati titik-titik tersebut.</p>
-</section>
-<section id="c-persamaan-linear-tiga-variabel-atau-lebih">
-<h2>c) Persamaan Linear Tiga Variabel atau Lebih<a class="headerlink" href="#c-persamaan-linear-tiga-variabel-atau-lebih" title="Link to this heading">#</a></h2>
-<p>Jika terdapat tiga variabel, bentuknya:
-ax+by+cz=d</p>
-<p>Contoh:</p>
-<ul class="simple">
-<li><p>3x+2y−z=5</p></li>
-</ul>
-<p>Solusinya adalah titik-titik dalam ruang tiga dimensi. Jika jumlah variabel lebih dari tiga, solusinya membentuk ruang berdimensi lebih tinggi.</p>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="sifat-sifat-persamaan-linear">
-<h1>Sifat-Sifat Persamaan Linear<a class="headerlink" href="#sifat-sifat-persamaan-linear" title="Link to this heading">#</a></h1>
-<ul class="simple">
-<li><p>Variabel memiliki pangkat 1</p></li>
-<li><p>Grafiknya selalu berupa garis lurus</p></li>
-<li><p>Solusinya bisa tunggal, banyak, atau tidak ada</p></li>
-</ul>
-<section id="variabel-memiliki-pangkat-1">
-<h2>Variabel memiliki pangkat 1<a class="headerlink" href="#variabel-memiliki-pangkat-1" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Tidak ada variabel berpangkat lebih tinggi seperti <span class="math notranslate nohighlight">\(x^2\)</span> atau <span class="math notranslate nohighlight">\(y^3\)</span>.</p></li>
-<li><p>Bentuk seperti 2x+3y=5 adalah linear, tetapi <span class="math notranslate nohighlight">\(x^2\)</span>+y=4 bukan.</p></li>
+<li><p>Definisi Eigenvalue dan Eigenvector</p></li>
+<li><p>Mencari eigen value dan eigen vektor dengan polinomial karakteristik</p></li>
+<li><p>Contoh soal:
+A. 3,0,0,3
+B. -2,0,0,4</p></li>
+<li><p>Urutkan urutan agen vector berdasarkan agen value.</p></li>
 </ul>
 </section>
-<section id="grafiknya-selalu-berupa-garis-lurus">
-<h2>Grafiknya selalu berupa garis lurus<a class="headerlink" href="#grafiknya-selalu-berupa-garis-lurus" title="Link to this heading">#</a></h2>
+<section class="tex2jax_ignore mathjax_ignore" id="definisi">
+<h1>Definisi<a class="headerlink" href="#definisi" title="Link to this heading">#</a></h1>
 <ul class="simple">
-<li><p>Untuk satu variabel: garis di sumbu angka.</p></li>
-<li><p>Untuk dua variabel: garis di bidang koordinat.</p></li>
-<li><p>Untuk tiga variabel: bidang dalam ruang tiga dimensi.</p></li>
+<li><p>vektor eigen adalah vektor yang arahnya tidak berubah ketika dikalikan dengan suatu matriks. Yang berubah hanyalah panjangnya (skalanya).</p></li>
+<li><p>Eigenvalue adalah faktor pengali skalar yang mengubah panjang (skala) dari eigenvector tersebut saat dikalikan dengan matriks.</p></li>
 </ul>
+<p>yaitu:</p>
+<p>{Mencari Eigenvalue dan Eigenvector dengan Polinomial Karakteristik}</p>
+<p>##2. Mencari Eigenvalues dan Eigenvector menggikan Polynomial Carakteristik</p>
+<section id="matriks-a">
+<h2>1. Matriks A<a class="headerlink" href="#matriks-a" title="Link to this heading">#</a></h2>
+<p>Pertama-tama Bentuk <span class="math notranslate nohighlight">\(A - \lambda I\)</span></p>
+<p>Kita kurangkan <span class="math notranslate nohighlight">\(\lambda\)</span> dari diagonal (karena <span class="math notranslate nohighlight">\(I\)</span> adalah matriks identitas):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A - \lambda I =
+\begin{bmatrix}
+3 - \lambda &amp; 0 \\
+0 &amp; 3 - \lambda
+\end{bmatrix}
+\end{split}\]</div>
+<p>lalu Determinan dari <span class="math notranslate nohighlight">\(A - \lambda I\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\det(A - \lambda I) = (3 - \lambda)(3 - \lambda) = (3 - \lambda)^2
+\]</div>
+<p>Selanjutnya Polinomial Karakteristik</p>
+<div class="math notranslate nohighlight">
+\[
+(3 - \lambda)^2 = 0
+\Rightarrow \lambda = 3 \quad \text{(dengan multiplikasi 2)}
+\]</div>
+<p>lalu cari Eigenvector</p>
+<p>Selesaikan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+(A - 3I)\vec{v} = \vec{0}
+\Rightarrow
+\begin{bmatrix}
+0 &amp; 0 \\
+0 &amp; 0
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 \\
+0
+\end{bmatrix}
+\end{split}\]</div>
+<p>Sistem ini memberikan solusi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x \text{ bebas}, \quad y \text{ bebas} \Rightarrow
+\vec{v} =
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}, \quad \text{dengan } (x,y) \ne (0,0)
+\end{split}\]</div>
+<p>Artinya, semua vektor tak nol adalah eigenvector untuk <span class="math notranslate nohighlight">\(\lambda = 3\)</span>.</p>
 </section>
-<section id="solusinya-bisa-tunggal-banyak-atau-tidak-ada">
-<h2>Solusinya bisa tunggal, banyak, atau tidak ada<a class="headerlink" href="#solusinya-bisa-tunggal-banyak-atau-tidak-ada" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Persamaan satu variabel selalu memiliki satu solusi.</p></li>
-<li><p>Persamaan dua variabel dapat memiliki satu solusi (jika dua garis berpotongan), tak hingga banyak solusi (jika dua garis berimpit), atau tidak ada solusi (jika dua garis sejajar).</p></li>
-</ul>
+<section id="matriks-b">
+<h2>2. Matriks B<a class="headerlink" href="#matriks-b" title="Link to this heading">#</a></h2>
+<p>Pertama Bentuk <span class="math notranslate nohighlight">\(B - \lambda I\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B - \lambda I =
+\begin{bmatrix}
+-2 - \lambda &amp; 0 \\
+0 &amp; 4 - \lambda
+\end{bmatrix}
+\end{split}\]</div>
+<p>lalu kita cari Determinan</p>
+<div class="math notranslate nohighlight">
+\[
+\det(B - \lambda I) = (-2 - \lambda)(4 - \lambda)
+\]</div>
+<p>Aelanjutnya Polinomial Karakteristik</p>
+<div class="math notranslate nohighlight">
+\[
+(-2 - \lambda)(4 - \lambda) = 0
+\Rightarrow \lambda_1 = -2, \quad \lambda_2 = 4
+\]</div>
+<p>Lalu Cari Eigenvector untuk <span class="math notranslate nohighlight">\(\lambda = -2\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B - (-2)I = B + 2I =
+\begin{bmatrix}
+0 &amp; 0 \\
+0 &amp; 6
+\end{bmatrix}
+\end{split}\]</div>
+<p>Selesaikan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+0 &amp; 0 \\
+0 &amp; 6
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 \\
+0
+\end{bmatrix}
+\Rightarrow
+6y = 0 \Rightarrow y = 0
+\Rightarrow x \text{ bebas}
+\end{split}\]</div>
+<p>Jadi, eigenvectornya:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{v}_1 =
+\begin{bmatrix}
+x \\
+0
+\end{bmatrix}, \quad x \ne 0
+\Rightarrow \vec{v}_1 = x \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Ambil <span class="math notranslate nohighlight">\(x = 1\)</span>, maka:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{v}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+\end{split}\]</div>
+<p>lalu Cari Eigenvector untuk <span class="math notranslate nohighlight">\(\lambda = 4\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B - 4I =
+\begin{bmatrix}
+-6 &amp; 0 \\
+0 &amp; 0
+\end{bmatrix}
+\end{split}\]</div>
+<p>Selesaikan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+-6 &amp; 0 \\
+0 &amp; 0
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 \\
+0
+\end{bmatrix}
+\Rightarrow
+-6x = 0 \Rightarrow x = 0
+\Rightarrow y \text{ bebas}
+\end{split}\]</div>
+<p>Jadi, eigenvectornya:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{v}_2 = \begin{bmatrix}
+0 \\
+y
+\end{bmatrix}, \quad y \ne 0
+\Rightarrow \vec{v}_2 = y \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<p>Ambil <span class="math notranslate nohighlight">\(y = 1\)</span>, maka:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{v}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+\end{split}\]</div>
 </section>
 </section>
 
@@ -539,20 +629,20 @@ ax+by+cz=d</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="TKAL.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Sistem Persamaan Linear</p>
+        <p class="prev-next-title">Tugas KAL</p>
       </div>
     </a>
     <a class="right-next"
-       href="notebook.html"
+       href="kali_silang.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Solusi Persamaan Linear</p>
+        <p class="prev-next-title">Cross Product</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -572,17 +662,10 @@ ax+by+cz=d</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Definisi Persamaan Linear</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-persamaan-linear">Jenis Persamaan Linear</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-persamaan-linear-satu-variabel-plsv">a) Persamaan Linear Satu Variabel (PLSV)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-persamaan-linear-dua-variabel-pldv">b) Persamaan Linear Dua Variabel (PLDV)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-persamaan-linear-tiga-variabel-atau-lebih">c) Persamaan Linear Tiga Variabel atau Lebih</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-persamaan-linear">Sifat-Sifat Persamaan Linear</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabel-memiliki-pangkat-1">Variabel memiliki pangkat 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grafiknya-selalu-berupa-garis-lurus">Grafiknya selalu berupa garis lurus</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusinya-bisa-tunggal-banyak-atau-tidak-ada">Solusinya bisa tunggal, banyak, atau tidak ada</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Eigenvalue dan Eigenvector</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi">Definisi</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-a">1. Matriks A</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-b">2. Matriks B</a></li>
 </ul>
 </li>
 </ul>

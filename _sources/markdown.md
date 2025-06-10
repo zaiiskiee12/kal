@@ -1,55 +1,89 @@
-# Markdown Files
+# Definisi Persamaan Linear
+Persamaan linear adalah sebuah persamaan matematika yang hubungan antara variabelnya membentuk garis lurus jika digambarkan dalam grafik. Biasanya, persamaan linear memiliki bentuk umum seperti:
+$a_1 x_1 + a_2 x_2 +......+a_n x_n$ = b
 
-Whether you write your book's content in Jupyter Notebooks (`.ipynb`) or
-in regular markdown files (`.md`), you'll write in the same flavor of markdown
-called **MyST Markdown**.
-This is a simple file to help you get started and show off some syntax.
+Di mana:
+$x_1,x_2​,…,x_n$​ adalah variabel.
+$a_1​,a_2,…,a_n$​ adalah koefisien (angka yang mengalikan variabel).
+b adalah konstanta (angka tetap).
 
-## What is MyST?
+Contoh sederhana:
 
-MyST stands for "Markedly Structured Text". It
-is a slight variation on a flavor of markdown called "CommonMark" markdown,
-with small syntax extensions to allow you to write **roles** and **directives**
-in the Sphinx ecosystem.
+    2x+3=02x+3=0 adalah persamaan linear dengan satu variabel x.
+    4x+2y=104x+2y=10 adalah persamaan linear dengan dua variabel x dan y.
 
-For more about MyST, see [the MyST Markdown Overview](https://jupyterbook.org/content/myst.html).
+Ciri utama persamaan linear adalah bahwa variabelnya tidak memiliki eksponen selain 1 (misalnya, $x^2$ atau $y^3$ tidak ada dalam persamaan linear). Jika ada lebih dari satu variabel, solusinya adalah titik-titik yang saling berhubungan dalam bentuk garis lurus di grafik.
 
-## Sample Roles and Directives
+# Jenis Persamaan Linear
 
-Roles and directives are two of the most powerful tools in Jupyter Book. They
-are like functions, but written in a markup language. They both
-serve a similar purpose, but **roles are written in one line**, whereas
-**directives span many lines**. They both accept different kinds of inputs,
-and what they do with those inputs depends on the specific role or directive
-that is being called.
+Persamaan linear dapat diklasifikasikan berdasarkan jumlah variabelnya:
+* Persamaan Linear Satu Variabel (PLSV)
+* Persamaan Linear Dua Variabel (PLDV)
+* Persamaan Linear Tiga Variabel atau Lebih
 
-Here is a "note" directive:
+## a) Persamaan Linear Satu Variabel (PLSV)
 
-```{note}
-Here is a note
-```
+Merupakan persamaan yang hanya memiliki satu variabel, berbentuk:
 
-It will be rendered in a special box when you build your book.
+ax+b=0
 
-Here is an inline directive to refer to a document: {doc}`markdown-notebooks`.
+Contoh:
+
+2x+3=0
+Penyelesaian: x = -$\frac{3}{2}$
+
+Secara grafis, persamaan ini dapat direpresentasikan sebagai garis lurus pada sumbu-x (jika hanya ada satu variabel x).
+
+## b) Persamaan Linear Dua Variabel (PLDV)
+
+Persamaan dengan dua variabel memiliki bentuk:
+ax+by=c
+
+Contoh:
+
+    4x+2y=10
+
+Solusinya berupa himpunan pasangan bilangan (x,y) yang memenuhi persamaan tersebut. Jika digambarkan dalam sistem koordinat Kartesius, persamaan ini membentuk garis lurus.
+
+Untuk menentukan titik potong dengan sumbu-x dan sumbu-y:
+
+    Jika y=0, maka 4x=10 → x=2.5 (titik potong dengan sumbu-x adalah (2.5,0)).
+    Jika x=0, maka 2y=10 → y=5 (titik potong dengan sumbu-y adalah (0,5)).
+
+Grafik persamaan ini adalah garis lurus yang melewati titik-titik tersebut.
 
 
-## Citations
 
-You can also cite references that are stored in a `bibtex` file. For example,
-the following syntax: `` {cite}`holdgraf_evidence_2014` `` will render like
-this: {cite}`holdgraf_evidence_2014`.
+## c) Persamaan Linear Tiga Variabel atau Lebih
 
-Moreover, you can insert a bibliography into your page with this syntax:
-The `{bibliography}` directive must be used for all the `{cite}` roles to
-render properly.
-For example, if the references for your book are stored in `references.bib`,
-then the bibliography is inserted with:
+Jika terdapat tiga variabel, bentuknya:
+ax+by+cz=d
 
-```{bibliography}
-```
+Contoh:
 
-## Learn more
+* 3x+2y−z=5
 
-This is just a simple starter to get you started.
-You can learn a lot more at [jupyterbook.org](https://jupyterbook.org).
+Solusinya adalah titik-titik dalam ruang tiga dimensi. Jika jumlah variabel lebih dari tiga, solusinya membentuk ruang berdimensi lebih tinggi.
+
+
+# Sifat-Sifat Persamaan Linear
+
+* Variabel memiliki pangkat 1
+* Grafiknya selalu berupa garis lurus
+* Solusinya bisa tunggal, banyak, atau tidak ada
+
+## Variabel memiliki pangkat 1
+
+* Tidak ada variabel berpangkat lebih tinggi seperti $x^2$ atau $y^3$.
+* Bentuk seperti 2x+3y=5 adalah linear, tetapi $x^2$+y=4 bukan.
+
+## Grafiknya selalu berupa garis lurus
+
+* Untuk satu variabel: garis di sumbu angka.
+* Untuk dua variabel: garis di bidang koordinat.
+* Untuk tiga variabel: bidang dalam ruang tiga dimensi.
+
+## Solusinya bisa tunggal, banyak, atau tidak ada
+
+* Persamaan satu variabel selalu memiliki satu solusi.
+* Persamaan dua variabel dapat memiliki satu solusi (jika dua garis berpotongan), tak hingga banyak solusi (jika dua garis berimpit), atau tidak ada solusi (jika dua garis sejajar).

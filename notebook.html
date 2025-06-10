@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Definisi Persamaan Linear &#8212; My sample book</title>
+    <title>Solusi Persamaan Linear &#8212; My sample book</title>
   
   
   
@@ -57,13 +57,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'markdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Solusi Persamaan Linear" href="notebook.html" />
-    <link rel="prev" title="Sistem Persamaan Linear" href="intro.html" />
+    <link rel="next" title="Eliminasi Persamaan Linear" href="markdown-notebooks.html" />
+    <link rel="prev" title="Definisi Persamaan Linear" href="markdown.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,10 +180,10 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Definisi Persamaan Linear</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Definisi Persamaan Linear</a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="notebook.html">Solusi Persamaan Linear</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Solusi Persamaan Linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Eliminasi Persamaan Linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Penyelesaian%20SP.html">Penyelesaian Sistem Persamaan Linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrix.html">Matrix</a></li>
@@ -269,7 +267,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmarkdown.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebook.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +297,7 @@
       
       
       
-      <li><a href="_sources/markdown.md" target="_blank"
+      <li><a href="_sources/notebook.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -309,7 +307,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -383,7 +381,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Definisi Persamaan Linear</h1>
+    <h1>Solusi Persamaan Linear</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -393,21 +391,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Definisi Persamaan Linear</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-persamaan-linear">Jenis Persamaan Linear</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-persamaan-linear-satu-variabel-plsv">a) Persamaan Linear Satu Variabel (PLSV)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-persamaan-linear-dua-variabel-pldv">b) Persamaan Linear Dua Variabel (PLDV)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-persamaan-linear-tiga-variabel-atau-lebih">c) Persamaan Linear Tiga Variabel atau Lebih</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#satu-solusi">Satu Solusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#banyak-solusi">Banyak Solusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tidak-ada-solusi">Tidak Ada Solusi</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-persamaan-linear">Sifat-Sifat Persamaan Linear</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabel-memiliki-pangkat-1">Variabel memiliki pangkat 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grafiknya-selalu-berupa-garis-lurus">Grafiknya selalu berupa garis lurus</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusinya-bisa-tunggal-banyak-atau-tidak-ada">Solusinya bisa tunggal, banyak, atau tidak ada</a></li>
-</ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -418,94 +405,42 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="definisi-persamaan-linear">
-<h1>Definisi Persamaan Linear<a class="headerlink" href="#definisi-persamaan-linear" title="Link to this heading">#</a></h1>
-<p>Persamaan linear adalah sebuah persamaan matematika yang hubungan antara variabelnya membentuk garis lurus jika digambarkan dalam grafik. Biasanya, persamaan linear memiliki bentuk umum seperti:
-<span class="math notranslate nohighlight">\(a_1 x_1 + a_2 x_2 +......+a_n x_n\)</span> = b</p>
-<p>Di mana:
-<span class="math notranslate nohighlight">\(x_1,x_2​,…,x_n\)</span>​ adalah variabel.
-<span class="math notranslate nohighlight">\(a_1​,a_2,…,a_n\)</span>​ adalah koefisien (angka yang mengalikan variabel).
-b adalah konstanta (angka tetap).</p>
-<p>Contoh sederhana:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2x+3=02x+3=0 adalah persamaan linear dengan satu variabel x.
-4x+2y=104x+2y=10 adalah persamaan linear dengan dua variabel x dan y.
-</pre></div>
-</div>
-<p>Ciri utama persamaan linear adalah bahwa variabelnya tidak memiliki eksponen selain 1 (misalnya, <span class="math notranslate nohighlight">\(x^2\)</span> atau <span class="math notranslate nohighlight">\(y^3\)</span> tidak ada dalam persamaan linear). Jika ada lebih dari satu variabel, solusinya adalah titik-titik yang saling berhubungan dalam bentuk garis lurus di grafik.</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="jenis-persamaan-linear">
-<h1>Jenis Persamaan Linear<a class="headerlink" href="#jenis-persamaan-linear" title="Link to this heading">#</a></h1>
-<p>Persamaan linear dapat diklasifikasikan berdasarkan jumlah variabelnya:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="solusi-persamaan-linear">
+<h1>Solusi Persamaan Linear<a class="headerlink" href="#solusi-persamaan-linear" title="Link to this heading">#</a></h1>
+<p>Solusi persamaan linear adalah nilai dari variabel yang memenuhi persamaan tersebut. Cara menyelesaikan persamaan linear tergantung pada jumlah variabelnya. Solusinya bisa tunggal, banyak, atau tidak ada</p>
+<section id="satu-solusi">
+<h2>Satu Solusi<a class="headerlink" href="#satu-solusi" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Persamaan Linear Satu Variabel (PLSV)</p></li>
-<li><p>Persamaan Linear Dua Variabel (PLDV)</p></li>
-<li><p>Persamaan Linear Tiga Variabel atau Lebih</p></li>
+<li><p>Terjadi jika dua atau lebih persamaan dalam sistem memiliki satu titik potong.</p></li>
+<li><p>Dalam sistem persamaan linear dua variabel (SPLDV), ini berarti dua garis memiliki gradien berbeda dan berpotongan di satu titik.</p></li>
+<li><p>Dalam sistem persamaan linear tiga variabel (SPLTV), ini berarti tiga bidang berpotongan di satu titik.</p></li>
 </ul>
-<section id="a-persamaan-linear-satu-variabel-plsv">
-<h2>a) Persamaan Linear Satu Variabel (PLSV)<a class="headerlink" href="#a-persamaan-linear-satu-variabel-plsv" title="Link to this heading">#</a></h2>
-<p>Merupakan persamaan yang hanya memiliki satu variabel, berbentuk:</p>
-<p>ax+b=0</p>
-<p>Contoh:</p>
-<p>2x+3=0
-Penyelesaian: x = -<span class="math notranslate nohighlight">\(\frac{3}{2}\)</span></p>
-<p>Secara grafis, persamaan ini dapat direpresentasikan sebagai garis lurus pada sumbu-x (jika hanya ada satu variabel x).</p>
-</section>
-<section id="b-persamaan-linear-dua-variabel-pldv">
-<h2>b) Persamaan Linear Dua Variabel (PLDV)<a class="headerlink" href="#b-persamaan-linear-dua-variabel-pldv" title="Link to this heading">#</a></h2>
-<p>Persamaan dengan dua variabel memiliki bentuk:
-ax+by=c</p>
-<p>Contoh:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>4x+2y=10
-</pre></div>
-</div>
-<p>Solusinya berupa himpunan pasangan bilangan (x,y) yang memenuhi persamaan tersebut. Jika digambarkan dalam sistem koordinat Kartesius, persamaan ini membentuk garis lurus.</p>
-<p>Untuk menentukan titik potong dengan sumbu-x dan sumbu-y:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Jika y=0, maka 4x=10 → x=2.5 (titik potong dengan sumbu-x adalah (2.5,0)).
-Jika x=0, maka 2y=10 → y=5 (titik potong dengan sumbu-y adalah (0,5)).
-</pre></div>
-</div>
-<p>Grafik persamaan ini adalah garis lurus yang melewati titik-titik tersebut.</p>
-</section>
-<section id="c-persamaan-linear-tiga-variabel-atau-lebih">
-<h2>c) Persamaan Linear Tiga Variabel atau Lebih<a class="headerlink" href="#c-persamaan-linear-tiga-variabel-atau-lebih" title="Link to this heading">#</a></h2>
-<p>Jika terdapat tiga variabel, bentuknya:
-ax+by+cz=d</p>
-<p>Contoh:</p>
+<p>contoh:</p>
+<p>5x+2y=15</p>
+<p>x+4y=20</p>
+<iframe src="https://www.geogebra.org/calculator/pkgpygkq?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe></section>
+<section id="banyak-solusi">
+<h2>Banyak Solusi<a class="headerlink" href="#banyak-solusi" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>3x+2y−z=5</p></li>
+<li><p>Terjadi jika dua persamaan dalam sistem sama atau identik, yang berarti mereka memiliki gradien dan titik potong yang sama.</p></li>
+<li><p>Dalam SPLDV, ini berarti kedua garis berimpit (sama persis).</p></li>
+<li><p>Dalam SPLTV, ini berarti tiga bidang berimpit atau membentuk satu garis perpotongan tak terbatas.</p></li>
 </ul>
-<p>Solusinya adalah titik-titik dalam ruang tiga dimensi. Jika jumlah variabel lebih dari tiga, solusinya membentuk ruang berdimensi lebih tinggi.</p>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="sifat-sifat-persamaan-linear">
-<h1>Sifat-Sifat Persamaan Linear<a class="headerlink" href="#sifat-sifat-persamaan-linear" title="Link to this heading">#</a></h1>
+<p>contoh:</p>
+<p>5x+2y=10</p>
+<p>10x+4y=20</p>
+<iframe src="https://www.geogebra.org/calculator/hyxu9bmz?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe></section>
+<section id="tidak-ada-solusi">
+<h2>Tidak Ada Solusi<a class="headerlink" href="#tidak-ada-solusi" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Variabel memiliki pangkat 1</p></li>
-<li><p>Grafiknya selalu berupa garis lurus</p></li>
-<li><p>Solusinya bisa tunggal, banyak, atau tidak ada</p></li>
+<li><p>Terjadi jika dua atau lebih persamaan dalam sistem tidak memiliki titik potong.</p></li>
+<li><p>Dalam SPLDV, ini berarti dua garis sejajar (gradien sama tetapi titik potong berbeda).</p></li>
+<li><p>Dalam SPLTV, ini berarti tiga bidang tidak memiliki titik perpotongan bersama.</p></li>
 </ul>
-<section id="variabel-memiliki-pangkat-1">
-<h2>Variabel memiliki pangkat 1<a class="headerlink" href="#variabel-memiliki-pangkat-1" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Tidak ada variabel berpangkat lebih tinggi seperti <span class="math notranslate nohighlight">\(x^2\)</span> atau <span class="math notranslate nohighlight">\(y^3\)</span>.</p></li>
-<li><p>Bentuk seperti 2x+3y=5 adalah linear, tetapi <span class="math notranslate nohighlight">\(x^2\)</span>+y=4 bukan.</p></li>
-</ul>
-</section>
-<section id="grafiknya-selalu-berupa-garis-lurus">
-<h2>Grafiknya selalu berupa garis lurus<a class="headerlink" href="#grafiknya-selalu-berupa-garis-lurus" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Untuk satu variabel: garis di sumbu angka.</p></li>
-<li><p>Untuk dua variabel: garis di bidang koordinat.</p></li>
-<li><p>Untuk tiga variabel: bidang dalam ruang tiga dimensi.</p></li>
-</ul>
-</section>
-<section id="solusinya-bisa-tunggal-banyak-atau-tidak-ada">
-<h2>Solusinya bisa tunggal, banyak, atau tidak ada<a class="headerlink" href="#solusinya-bisa-tunggal-banyak-atau-tidak-ada" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Persamaan satu variabel selalu memiliki satu solusi.</p></li>
-<li><p>Persamaan dua variabel dapat memiliki satu solusi (jika dua garis berpotongan), tak hingga banyak solusi (jika dua garis berimpit), atau tidak ada solusi (jika dua garis sejajar).</p></li>
-</ul>
-</section>
+<p>contoh:</p>
+<p>5x+2y=15</p>
+<p>10x+4y=20</p>
+<iframe src="https://www.geogebra.org/calculator/tjdjpyee?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -539,20 +474,20 @@ ax+by+cz=d</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="markdown.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Sistem Persamaan Linear</p>
+        <p class="prev-next-title">Definisi Persamaan Linear</p>
       </div>
     </a>
     <a class="right-next"
-       href="notebook.html"
+       href="markdown-notebooks.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Solusi Persamaan Linear</p>
+        <p class="prev-next-title">Eliminasi Persamaan Linear</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -572,21 +507,10 @@ ax+by+cz=d</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Definisi Persamaan Linear</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-persamaan-linear">Jenis Persamaan Linear</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-persamaan-linear-satu-variabel-plsv">a) Persamaan Linear Satu Variabel (PLSV)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-persamaan-linear-dua-variabel-pldv">b) Persamaan Linear Dua Variabel (PLDV)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-persamaan-linear-tiga-variabel-atau-lebih">c) Persamaan Linear Tiga Variabel atau Lebih</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#satu-solusi">Satu Solusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#banyak-solusi">Banyak Solusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tidak-ada-solusi">Tidak Ada Solusi</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-persamaan-linear">Sifat-Sifat Persamaan Linear</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabel-memiliki-pangkat-1">Variabel memiliki pangkat 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grafiknya-selalu-berupa-garis-lurus">Grafiknya selalu berupa garis lurus</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusinya-bisa-tunggal-banyak-atau-tidak-ada">Solusinya bisa tunggal, banyak, atau tidak ada</a></li>
-</ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
